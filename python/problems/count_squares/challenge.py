@@ -1,5 +1,6 @@
 """
 Challenge: Count Squares
+Level: Hard
 
 Write a function that takes in a list of Cartesian coordinates (i.e.,(x, y)
 coodinates) and returns the number of squares that can be formed by these

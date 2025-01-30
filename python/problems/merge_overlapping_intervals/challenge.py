@@ -1,5 +1,6 @@
 """
 Challenge: Merge Overlapping Intervals
+Level: Medium
 
 Write a function that takes in a non-empty array of arbitrary Intervals,
 merges any overlapping intervals, and returns the new intervals in no

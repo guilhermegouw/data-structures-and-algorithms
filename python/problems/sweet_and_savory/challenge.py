@@ -1,5 +1,7 @@
 """
 Challenge: Sweet And Savory
+Level: Medium
+
 You're hosting an event at a food festival and want to showcase the best
 possible pairing of two dishes from the festival that complement each other's
 flavor profile.

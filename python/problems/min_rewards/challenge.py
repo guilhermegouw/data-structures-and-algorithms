@@ -1,5 +1,6 @@
 """
 Challenge: Min Rewards
+Level: Hard
 
 Imagine that you're a teacher who's just graded the final exam in a class. You
 have a list of students scores on the final exam in a particular order (not

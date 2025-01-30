@@ -1,5 +1,7 @@
 """
-Challenge:
+Challenge: Longest Peak
+Level: Medium
+
 Write a function that takes in an array of integers and returns the lenght of
 the longest peak in the array.
 A peak is defined as adjacent integers in the array that are strictly

@@ -1,5 +1,6 @@
 """
 Challenge: Knight Connection
+Level: Hard
 
 You're given the position of two knight pieces on an infinity chess board.
 Write a function that returns the minimum number of turns required before one

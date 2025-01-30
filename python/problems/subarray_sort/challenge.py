@@ -1,5 +1,6 @@
 """
 Challenge: Subarray Sort
+Level: Hard
 
 Write a function that takes in an array of at least two integers and that
 returns an array of the starting and ending indices of the subarray in the

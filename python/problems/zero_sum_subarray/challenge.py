@@ -1,5 +1,6 @@
 """
 Challenge: Zero Sum Subarray
+Level: Medium
 
 You're given a list of integers nums.
 Write a function that returns a boolean representing whether there exists a

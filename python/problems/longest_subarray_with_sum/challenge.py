@@ -1,5 +1,6 @@
 """
 Challenge: Longest Subarray With Sum
+Level: Hard
 
 Write a function that takes in a non-empty array of non-negative integers and
 a non-negative integer representing a target sum. The function should find the

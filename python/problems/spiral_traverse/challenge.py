@@ -1,5 +1,6 @@
 """
-Challenge:
+Challenge: Spiral Traverse
+Level: Medium
 
 Write a function that takes in an n x m two-dimensional array(that can be
 squared-shaped when n==m) and returns a one-demensional array of all the

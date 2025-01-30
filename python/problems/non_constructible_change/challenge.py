@@ -1,5 +1,7 @@
 """
-Challenge:
+Challenge: Non-Constructible Change
+Level: Easy
+
 Given an array of positive integers representing the value of coins in your
 possesion, write a function that returns the minimum amount of change (the
 minimum sum of money) that you cannot create. The given coins have any positive

@@ -1,5 +1,6 @@
 """
-Challenge:
+Challenge: Monotonic Array
+Level: Medium
 
 Write a function in an array of integers and returns a boolean representing
 whether the array is monotonic.

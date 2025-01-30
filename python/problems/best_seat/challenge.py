@@ -1,5 +1,6 @@
 """
 Challenge: Best Seat
+Level: Medium
 
 You walk into a theater you're about to see a show in. The usher within the
 theater walks you to your row and mentions you're allowed to sit anywhere

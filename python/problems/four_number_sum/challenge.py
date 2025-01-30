@@ -1,5 +1,6 @@
 """
 Challenge: Four Number Sum
+Level: Hard
 
 Write a function that takes in a non-empty array of distinct integers and an
 integer representing a target sum. The function should find all quadruplets in

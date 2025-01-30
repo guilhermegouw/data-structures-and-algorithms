@@ -1,4 +1,7 @@
 """
+Challenge: Majority Element
+Level: Medium
+
 Write a function that takes in a non-empty, unordered array of positive
 integers and returns the array's majority element without sorting the array
 and without using more than constant space.

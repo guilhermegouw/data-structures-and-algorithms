@@ -1,5 +1,7 @@
 """
-Challenge:
+Challenge: Transpose Matrix
+Level: Easy
+
 You're given a 2D array of intengers matrix. Write a function that returns the
 transpose of the matrix.
 The transpose of a matrix is a flipped version of the original matrix across

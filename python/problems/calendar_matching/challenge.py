@@ -1,5 +1,6 @@
 """
 Challenge: Calendar Matching
+Level: Very Hard
 
 Imagine that you want to schedule a meeting of a certain duration with a
 co-worker. You have access to your calendar and you co-worker's calendar (both

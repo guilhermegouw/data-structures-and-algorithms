@@ -1,5 +1,6 @@
 """
 Challenge: Largest Range
+Level: Hard
 
 Write a function that takes in an array of integers and returns an array of
 length 2 representing the largest range of integers contained in that array.
