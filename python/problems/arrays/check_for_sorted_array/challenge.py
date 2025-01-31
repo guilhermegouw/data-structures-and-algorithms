@@ -1,5 +1,5 @@
 """
-Write a function that determines if the array is sorted 
+Write a function that determines if the array is sorted
 in ascending order.
 
 input:
