@@ -15,3 +15,9 @@ to_move = 2
 Output:
 [1, 3, 4, 2, 2, 2, 2, 2]
 """
+
+
+def move_element_to_end(arr, to_move):
+    new_arr = [element for element in arr if element != to_move]
+    targets = len(arr) - len(new_arr)
+    return new_arr + [to_move] * targets
