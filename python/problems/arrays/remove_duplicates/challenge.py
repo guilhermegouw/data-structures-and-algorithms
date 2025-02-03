@@ -1,5 +1,6 @@
 """
-Remove Duplicates from Sorted Array
+Challenge: Remove Duplicates from Sorted Array
+Level: Easy
 
 Return a new array with duplicates removed, preserving order.
 
