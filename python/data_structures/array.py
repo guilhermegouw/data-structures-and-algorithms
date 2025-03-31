@@ -83,7 +83,7 @@ class StaticArray:
         self.current_count = 0
 
     def _validate_index(self, index):
-        if index < 0 or index >= self.size:
+        if index not in range(self.size):
             raise IndexError("Index out of bounds.")
 
     def _validate_type(self, value):
