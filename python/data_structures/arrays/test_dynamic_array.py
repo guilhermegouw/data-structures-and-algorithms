@@ -13,3 +13,23 @@ def test_initialization():
         TypeError, match="data_type must be a valid Python type."
     ):
         array = DynamicArray("integer")
+
+
+def test_append():
+    array = DynamicArray(int)
+    array.append(1)
+    assert array.internal_array == [1, None]
+    assert array.size == 1
+    with pytest.raises(
+        TypeError, match="Expected type <class 'int'>, got <class 'str'>"
+    ):
+        array.append("one")
+
+
+def test_resize():
+    array = DynamicArray(int)
+    array.append(1)
+    array.append(2)
+    array.append(3)
+    assert array.capacity == 4
+    assert array.internal_array[:3] == [1, 2, 3]
