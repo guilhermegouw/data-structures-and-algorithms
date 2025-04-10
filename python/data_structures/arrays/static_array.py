@@ -9,7 +9,7 @@ while providing basic array operations.
 
 Core Characteristics
 - Fixed size (defined at initialization)
-- Homogeneous elements (single data type)
+- Homogeneous internal_array (single data type)
 - Index-based access (0-based indexing)
 - No dynamic resizing
 
@@ -33,7 +33,7 @@ Required Operations
 
 Additional Requirements
 - Proper error handling for all edge cases
-- Type checking for homogeneous elements
+- Type checking for homogeneous internal_array
 - Bounds checking for all operations
 - Clear error messages
 
@@ -50,52 +50,16 @@ Search
 index = arr.search(2)  # index = 1
 """
 
+from .base_array import BaseArray
 
-class StaticArray:
-    def __init__(self, size, datatype) -> None:
-        if size <= 0:
-            raise ValueError("Array size must be greater than 0.")
-        if not isinstance(datatype, type):
-            raise TypeError(
-                "datatype must be a valid type, e.g., int, float, str."
-            )
-        self.size = size
-        self.data_type = datatype
-        self.elements = [None] * size
 
-    def _validate_index(self, index):
-        if index not in range(self.size):
-            raise IndexError("Index out of bounds.")
-
-    def _validate_type(self, value):
-        if not isinstance(value, self.data_type):
-            raise TypeError(
-                f"Expected type {self.data_type}, got {type(value)}"
-            )
-
-    def __getitem__(self, index):
-        self._validate_index(index)
-        return self.elements[index]
-
-    def __setitem__(self, index, value):
-        self._validate_index(index)
-        self._validate_type(value)
-        self.elements[index] = value
+class StaticArray(BaseArray):
+    def __init__(self, datatype, capacity):
+        super().__init__(datatype, capacity)
+        self.size = capacity
 
     def search(self, value):
         for i in range(self.size):
-            if self.elements[i] == value:
+            if self.internal_array[i] == value:
                 return i
         return -1
-
-    def __str__(self):
-        return str(self.elements)
-
-
-if __name__ == "__main__":
-    arr = StaticArray(5, int)
-    print(arr)
-    print(arr[0])
-    arr[0] = 10
-    print(arr)
-    print(arr.search(2))
