@@ -11,7 +11,7 @@ def test_initialization():
     assert array.capacity == 2
     assert array.growth_factor == 2
     with pytest.raises(
-        TypeError, match="data_type must be a valid Python type."
+        TypeError, match="data_type must be a valid Python type"
     ):
         array = DynamicArray("integer")
 
@@ -23,8 +23,7 @@ def test_append():
     assert len(array) == 1
     with pytest.raises(
         TypeError,
-        match="DynamicArray expect type: <class 'int'>"
-        + " but got: <class 'str'>",
+        match="Expect type: <class 'int'>" + " got type: <class 'str'>",
     ):
         array.append("one")
 
@@ -44,7 +43,7 @@ def test_retrieve():
     array.append(2)
     array.append(3)
     assert array[0] == 1
-    with pytest.raises(IndexError, match="Index out of bounds"):
+    with pytest.raises(IndexError, match="Index out of bound"):
         array[3]
 
 
@@ -55,11 +54,11 @@ def test_update():
     array.append(3)
     array[0] = 4
     assert array[0] == 4
-    with pytest.raises(IndexError, match="Index out of bounds"):
+    with pytest.raises(IndexError, match="Index out of bound"):
         array[3] = 5
     with pytest.raises(
         TypeError,
-        match="DynamicArray expect type: <class 'int'> but got: <class 'str'>",
+        match="Expect type: <class 'int'> got type: <class 'str'>",
     ):
         array[0] = "One"
 
@@ -77,10 +76,10 @@ def test_insert():
     ]
     with pytest.raises(
         TypeError,
-        match="DynamicArray expect type: <class 'str'> but got: <class 'int'>",
+        match="Expect type: <class 'str'> got type: <class 'int'>",
     ):
         array.insert(2, 4)
-    with pytest.raises(IndexError, match="Index out of bounds"):
+    with pytest.raises(IndexError, match="Index out of bound"):
         array.insert(4, "orange")
 
 
@@ -92,7 +91,7 @@ def test_delete():
     array.delete(0)
     assert array == [2, 3]
     assert len(array) == 2
-    with pytest.raises(IndexError, match="Index out of bounds"):
+    with pytest.raises(IndexError, match="Index out of bound"):
         array.delete(2)
 
 

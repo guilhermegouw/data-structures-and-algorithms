@@ -1,5 +1,5 @@
 class BaseArray:
-    def __init__(self, data_type, capacity=10):
+    def __init__(self, data_type, capacity=2):
         if not isinstance(data_type, type):
             raise TypeError("data_type must be a valid Python type")
         if capacity <= 0:
@@ -17,6 +17,23 @@ class BaseArray:
         self._validate_index(index)
         self._validate_type(value)
         self.internal_array[index] = value
+
+    def __len__(self):
+        return self.size
+
+    def __eq__(self, other):
+        if isinstance(other, BaseArray) or isinstance(other, list):
+            if len(self) != len(other):
+                return False
+            for i in range(len(self)):
+                if self[i] != other[i]:
+                    return False
+            return True
+        return NotImplemented
+
+    def __iter__(self):
+        for i in range(self.size):
+            yield self.internal_array[i]
 
     def __str__(self):
         return str(self.internal_array)
