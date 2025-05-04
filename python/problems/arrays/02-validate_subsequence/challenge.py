@@ -22,5 +22,34 @@ True
 """
 
 
+# def validate_subsequence(array, sequence):
+#     array_idx = 0
+#     sequence_idx = 0
+#     while (
+#             array_idx < len(array)
+#             and sequence_idx < len(sequence)
+#           ):
+#         if sequence[sequence_idx] == array[array_idx]:
+#             sequence_idx += 1
+#             array_idx += 1
+#             if sequence_idx == len(sequence):
+#                 return True
+#         else:
+#             array_idx += 1
+#     return False
+
+# def validate_subsequence(array, sequence):
+#     seq_idx = 0
+#     for value in array:
+#         if seq_idx == len(sequence):
+#             return True
+#         if sequence[seq_idx] == value:
+#             seq_idx += 1
+#     return seq_idx == len(sequence)
+
 def validate_subsequence(array, sequence):
-    pass
+    seq_pos = 0
+    for num in array:
+        if seq_pos < len(sequence) and num == sequence[seq_pos]:
+            seq_pos += 1
+    return seq_pos == len(sequence)
