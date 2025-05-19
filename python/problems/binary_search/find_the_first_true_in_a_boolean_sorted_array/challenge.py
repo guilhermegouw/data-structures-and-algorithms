@@ -25,6 +25,6 @@ def find_the_first_true_in_a_sorted_boolean_array(array):
         if array[middle] is True:
             index = middle
             right = middle - 1
-        if array[middle] is False:
+        else:
             left = middle + 1
     return index
