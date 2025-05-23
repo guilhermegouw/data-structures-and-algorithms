@@ -29,12 +29,17 @@ Explanation: The smallest element is 2, and its index is 7.
 
 
 def find_minimum_in_rotated_sorted_array(array):
+    position = -1
     left = 0
     right = len(array) - 1
-    while array[left] > array[right]:
-        left += 1
-        right -= 1
-    return right + 1
+    while left <= right:
+        middle = (left + right) // 2
+        if array[middle] <= array[-1]:
+            right = middle - 1
+            position = middle
+        else:
+            left = middle + 1
+    return position
 
 
 find_minimum_in_rotated_sorted_array([3, 5, 7, 11, 13, 17, 19, 2])
